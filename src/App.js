@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Field, Form, Formik } from 'formik';
 import './App.css';
 
 function App() {
+  const [photos, setPhotos] = useState([])
+  const open = url => window.open(url)
+  console.log(photos)
   return (
     <div>
       <header>
@@ -15,7 +18,7 @@ function App() {
             }
           })
           const data = await response.json()
-          console.log(data)
+          setPhotos(data.results)
         }}
         >
           <Form className="form">
@@ -24,6 +27,15 @@ function App() {
           </Form>
         </Formik>
       </header>
+      <div>
+        <div>
+          {photos.map(photo =>
+            <div key={photo.id} onClick={() => open(photo.links.html)}>
+             <img src={photo.urls.regular}/>
+             <p>{[photo.description, photo.alt_description].join(" - ")}</p> 
+            </div>)}
+        </div>
+      </div>
     </div>
   );
 }
