@@ -36,3 +36,45 @@ header {
 
   height: 24px;
 }
+
+.container {
+  background-color: #eeee;
+  display: flex;
+  justify-content: center;
+}
+
+.center{
+  width: 1200px;
+  column-count: 3;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.imagenes-cont{
+  width: 370px;
+  margin: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 0 8px 13px 1px rgb(0 0 0 / 9%);
+  transition: box-shadow 0.2 ease;
+  background-color: #ffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.imagenes-cont:hover{
+  box-shadow: 0px 3px 5px rgb(0 0 0 / 30%);
+}
+.imagenes{
+  object-fit: cover;
+  width: 370px;
+  border-radius: 5px 5px 0 0;
+}
+
+.img-texto{
+  margin: 15px;
+}

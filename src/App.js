@@ -27,12 +27,12 @@ function App() {
           </Form>
         </Formik>
       </header>
-      <div>
-        <div>
+      <div className="container">
+        <div className="center">
           {photos.map(photo =>
-            <div key={photo.id} onClick={() => open(photo.links.html)}>
-             <img src={photo.urls.regular}/>
-             <p>{[photo.description, photo.alt_description].join(" - ")}</p> 
+            <div className="imagenes-cont" key={photo.id} onClick={() => open(photo.links.html)}>
+             <img src={photo.urls.regular}  className="imagenes"/>
+             <p className="img-texto">{[photo.description, photo.alt_description].join(" - ")}</p> 
             </div>)}
         </div>
       </div>
