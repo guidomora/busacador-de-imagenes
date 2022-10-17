@@ -78,3 +78,32 @@ header {
 .img-texto{
   margin: 15px;
 }
+
+
+/* ---------- mobile ------------- */
+
+@media only screen and (max-width: 767px) {
+
+  header {
+     font-size: 12px;
+  }
+
+  .center {
+    width: 400px;
+  }
+  .imagenes-cont{
+    width: 170px;
+    margin: 10px;
+  }
+
+  .imagenes{
+    width: 170px;
+  }
+
+  .img-texto {
+    margin: 5px;
+    font-size: 15px;
+  }
+
+
+}
